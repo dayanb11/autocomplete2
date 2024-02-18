@@ -26,10 +26,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class AutocompleteAutoActiveFirstOptionExample implements OnInit {
   myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = ['One', 'Two', 'Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {
+    debugger;
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),
